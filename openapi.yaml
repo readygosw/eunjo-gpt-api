@@ -1,3 +1,5 @@
+servers:
+  - url: https://your-api-server-url.com
 openapi: 3.1.0
 info:
   title: Eunjo Judgment API
