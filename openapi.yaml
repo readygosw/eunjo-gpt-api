@@ -1,5 +1,5 @@
 servers:
-  - url: http://localhost:3333
+  - url: https://ac96-211-251-19-213.ngrok-free.app
 openapi: 3.1.0
 info:
   title: Eunjo Judgment API
@@ -22,7 +22,7 @@ paths:
               required:
                 - text
       responses:
-        '200':
+        "200":
           description: Reasoning result with trust-tag metadata
           content:
             application/json:
