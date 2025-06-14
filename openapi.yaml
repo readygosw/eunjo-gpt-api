@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Eunjo Judgment API
+  version: 3.9.0-beta
+paths:
+  /run:
+    post:
+      operationId: runEunjoPipeline
+      summary: Execute full reasoning pipeline on a user input
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: User's input text
+              required:
+                - text
+      responses:
+        '200':
+          description: Reasoning result with trust-tag metadata
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  output:
+                    type: string
+                  route:
+                    type: string
+                  van:
+                    type: object
+                  puls:
+                    type: object
+                  shield:
+                    type: object
+                  pragma:
+                    type: object
+                  lyra:
+                    type: object
+                  radius:
+                    type: object
